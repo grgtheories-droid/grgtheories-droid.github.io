@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dailies - A Modern, Minimalist Mobile App</title>
+    <style>
+        /* CSS resets for consistency */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set base font size for scaling */
+        html {
+            font-size: 16px;
+        }
+
+        :root {
+            /* YOUR REQUESTED LIGHT BACKGROUND COLOR */
+            --bg-color: #F1F1EF;
+            /* YOUR REQUESTED DARK TEXT COLOR */
+            --text-color: #191919;
+            /* Secondary text and accents */
+            --subtext-color: #555;
+            --accent-color: #008fcc; /* A bright, professional blue */
+            /* A warm, slightly dark border color for light mode */
+            --border-color: #d1d1cf; 
+        }
+
+        body {
+            /* Use a simple, modern font stack */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* HEADER & LOGO CONFIGURATION */
+        .app-logo {
+            max-width: 160px; /* Limits the max size of the logo */
+            height: auto;     /* Maintains correct proportions */
+            display: block;   /* Standard centering for images */
+            margin-bottom: 2rem; /* Consistent space below the logo */
+        }
+
+        .badge {
+            background-color: rgba(0, 143, 204, 0.08);
+            color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 0 1.5rem 0;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        h1.site-title {
+            /* Hide the text 'Dailies' for the title, 
+               relying instead on the logo */
+            display: none; 
+        }
+
+        /* Set initial description paragraph visibility */
+        .description {
+            display: none; 
+        }
+
+        .features {
+            background: #ffffff; /* Contrast card against light bg */
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: left;
+            margin-bottom: 2.5rem;
+            width: 100%;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-icon {
+            color: var(--accent-color);
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .feature-text strong {
+            color: var(--text-color);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .feature-text span {
+            color: var(--subtext-color);
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.9rem 2.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+            width: auto;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: var(--subtext-color);
+        }
+
+        /* Media queries for larger screens */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .app-logo {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- THE APPN NAME & LOGO -->
+        <h1 class="site-title">Dailies</h1>
+        <img src="Dailies Logo for site.png" alt="Dailies App Logo" class="app-logo">
+
+        <!-- Small top label -->
+        <div class="badge">A Minimalist Approach</div>
+
+        <!-- Description -->
+        <p class="description">Dailies is a beautifully simple mobile application designed to simplify your daily routines and boost productivity without unnecessary features.</p>
+
+        <!-- Feature List -->
+        <div class="features">
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <div class="feature-text">
+                    <strong>Simple and Intuitive Interface</strong>
+                    <span>Designed for quick and easy use in mind. No bloat.</span>
+                </div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <div class="feature-text">
+                    <strong>Focus on Your Goals</strong>
+                    <span>Get a clear view of your day and get things done.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Button -->
+        <a href="#" class="btn">Learn More</a>
+
+        <!-- Footer -->
+        <footer>
+            &copy; 2026 Dailies. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
